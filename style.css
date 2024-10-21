@@ -93,10 +93,10 @@ table th {
     text-transform: uppercase;
 }
 
-th,
+/* th,
 td {
     padding: 2px;
-}
+} */
 
 #deleteAll {
     margin: 20px 0;
@@ -106,8 +106,8 @@ td {
 @media(max-width:550px) {
 
     table {
-        width: 80%;
-        font-size: 6px;
+        width: 100%;
+        font-size: 7px;
         text-align: center;
         margin: 10px auto;
     }
