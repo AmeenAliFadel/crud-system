@@ -43,13 +43,13 @@ margin-right: 10px;
 }
 .price input {
     width: 20%;
-    /* margin: 0 5px; */
 }
 
 #total {
     background: #a00d02;
     padding: 5px 2px;
     border-radius: 4px;
+    display: inline-block;
 }
 
 #total::before {
@@ -93,11 +93,6 @@ table th {
     text-transform: uppercase;
 }
 
-/* th,
-td {
-    padding: 2px;
-} */
-
 #deleteAll {
     margin: 20px 0;
 }
@@ -111,7 +106,16 @@ td {
         text-align: center;
         margin: 10px auto;
     }
-    table button{
+    #total{
+        margin: 5px 0;
+        width: 100%;
+
+    }
+    .price input {
+        width: 100%;
+    }
+    table button,
+    table th{
         font-size: 6px;
         
     }

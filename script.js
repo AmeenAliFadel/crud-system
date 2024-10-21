@@ -40,13 +40,7 @@ submit.onclick = function () {
     }
     if (title.value != '' && price.value != '' && category.value != '' && newProduct.count < 100) {
         if (mood == 'create') {
-            if (newProduct.count > 1) {
-                for (let i = 0; i < newProduct.count; i++) {
-                    dataProduct.push(newProduct);
-                }
-            } else {
-                dataProduct.push(newProduct);
-            }
+            dataProduct.push(newProduct);
         } else {
             dataProduct[temp] = newProduct;
             mood = 'create';
@@ -85,6 +79,7 @@ function showData() {
             <td>${dataProduct[i].discount}</td>
             <td>${dataProduct[i].total}</td>
             <td>${dataProduct[i].category}</td>
+            <td>${dataProduct[i].count}</td>
             <td><button onclick="updateData(${i})" id="update"> update</button></td>
             <td><button onclick=" deleteData(${i})" id="delete"> delete</button></td>
         </tr>`
@@ -102,7 +97,11 @@ showData()
 
 //delete
 function deleteData(i) {
-    dataProduct.splice(i, 1);
+    if(dataProduct[i].count>1){
+        dataProduct[i].count=dataProduct[i].count-1;
+    } else{
+        dataProduct.splice(i, 1);
+    }
     localStorage.product = JSON.stringify(dataProduct);
     showData();
 }
@@ -158,6 +157,7 @@ function searchData(value) {
                     <td>${dataProduct[i].discount}</td>
                     <td>${dataProduct[i].total}</td>
                     <td>${dataProduct[i].category}</td>
+                    <td>${dataProduct[i].count}</td>
                     <td><button onclick="updateData(${i})" id="update"> update</button></td>
                     <td><button onclick=" deleteData(${i})" id="delete"> delete</button></td>
                 </tr>`
@@ -174,6 +174,7 @@ function searchData(value) {
                     <td>${dataProduct[i].discount}</td>
                     <td>${dataProduct[i].total}</td>
                     <td>${dataProduct[i].category}</td>
+                    <td>${dataProduct[i].count}</td>
                     <td><button onclick="updateData(${i})" id="update"> update</button></td>
                     <td><button onclick=" deleteData(${i})" id="delete"> delete</button></td>
                 </tr>`
