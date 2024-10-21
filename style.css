@@ -102,25 +102,17 @@ td {
     margin: 20px 0;
 }
 
-/* @media(max-width:800px) {
-    table {
-        width: 80%;
-        font-size: 10px;
-        margin: 0 auto;
-
-    }
-} */
 
 @media(max-width:550px) {
 
     table {
         width: 80%;
-        font-size: 5px;
+        font-size: 6px;
         text-align: center;
         margin: 10px auto;
     }
     table button{
-        font-size: 7px;
+        font-size: 6px;
         
     }
     #price,#taxes,#ads,#discount{
