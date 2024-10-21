@@ -38,9 +38,12 @@ input:focus {
     background: #000;
     transform: scale(1.1);
 }
-
+#price,#taxes,#ads,#discount{
+margin-right: 10px;
+}
 .price input {
     width: 20%;
+    /* margin: 0 5px; */
 }
 
 #total {
@@ -80,9 +83,10 @@ button:hover {
 }
 
 table {
-    width: 100%;
+    width: 80%;
+    font-size: 10px;
     text-align: center;
-    margin: 10px 0;
+    margin: 10px auto;
 }
 
 table th {
@@ -91,27 +95,35 @@ table th {
 
 th,
 td {
-    padding: 5px;
+    padding: 2px;
 }
 
 #deleteAll {
     margin: 20px 0;
 }
 
-@media(max-width:800px) {
+/* @media(max-width:800px) {
     table {
         width: 80%;
         font-size: 10px;
         margin: 0 auto;
 
     }
-}
+} */
 
-@media(max-width:400px) {
+@media(max-width:550px) {
 
-    table,
-    table button {
-        width: 100%;
+    table {
+        width: 80%;
         font-size: 5px;
+        text-align: center;
+        margin: 10px auto;
     }
+    table button{
+        font-size: 7px;
+        
+    }
+    #price,#taxes,#ads,#discount{
+        margin-right: 5px;
+        }
 }
