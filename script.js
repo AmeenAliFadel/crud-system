@@ -118,7 +118,8 @@ function updateData(i) {
     ads.value = dataProduct[i].ads;
     discount.value = dataProduct[i].discount;
     getTotal()
-    count.style.display = 'none';
+    // count.style.display = 'none';
+    count.value = dataProduct[i].count;
     category.value = dataProduct[i].category;
     submit.innerHTML = 'update';
     mood = 'update'
